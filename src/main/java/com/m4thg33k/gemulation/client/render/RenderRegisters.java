@@ -1,0 +1,36 @@
+package com.m4thg33k.gemulation.client.render;
+
+import com.m4thg33k.gemulation.Gemulation;
+import com.m4thg33k.gemulation.blocks.ModBlocks;
+import com.m4thg33k.gemulation.lib.Names;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
+import net.silentchaos512.gems.lib.EnumGem;
+
+public class RenderRegisters {
+
+    public static void preInit()
+    {
+        RenderRegisters.registerItemRenders();
+    }
+
+    private static void registerItemRenders()
+    {
+        //itemblocks
+        for (EnumGem type : EnumGem.values())
+        {
+            int ord = type.ordinal();
+            if (ord<16) //isn't dark
+            {
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemFurnaceBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_FURNACE,"facing=north,isDark=false,on=false,variant="+type.name()));
+            }
+            else
+            {
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemFurnaceBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_FURNACE,"facing=north,isDark=true,on=false,variant="+type.name()));
+            }
+//            boolean isDark = type.ordinal()<16;
+//            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(isDark? ModBlocks.gemFurnaceBlock:ModBlocks.darkGemFurnaceBlock),isDark?type.ordinal()-16:type.ordinal(),new ModelResourceLocation(Gemulation.MODID+":"+ Names.GEM_FURNACE,"facing=north,isDark="+isDark+",on=false,variant="+ type.name()));
+        }
+    }
+}
