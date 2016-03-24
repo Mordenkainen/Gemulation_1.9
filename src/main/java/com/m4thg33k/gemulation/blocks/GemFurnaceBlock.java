@@ -23,7 +23,7 @@ import java.util.List;
 
 public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
-    private boolean isDark;
+    private boolean isBlockDark;
 
     public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class);
     public static final PropertyBool IS_DARK = PropertyBool.create("isDark");
@@ -31,7 +31,7 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
     public GemFurnaceBlock(boolean dark)
     {
         super();
-        this.isDark = dark;
+        this.isBlockDark = dark;
 
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false).withProperty(IS_DARK,false));
     }
@@ -53,12 +53,12 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT,isDark?EnumGem.values()[meta-16]:EnumGem.values()[meta]).withProperty(IS_DARK,isDark);
+        return getDefaultState().withProperty(VARIANT, isBlockDark ?EnumGem.values()[meta-16]:EnumGem.values()[meta]).withProperty(IS_DARK, isBlockDark);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (state.getValue(VARIANT).ordinal()) - (isDark?16:0);
+        return (state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0);
     }
 
     @Override
@@ -74,6 +74,6 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
     @Override
     public String getUnlocalizedName() {
-        return super.getUnlocalizedName() + (isDark?"_dark":"");
+        return super.getUnlocalizedName() + (isBlockDark ?"_dark":"");
     }
 }
