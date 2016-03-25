@@ -1,5 +1,6 @@
 package com.m4thg33k.gemulation.blocks;
 
+import com.m4thg33k.gemulation.core.util.LogHelper;
 import com.m4thg33k.gemulation.core.util.StringHelper;
 import com.m4thg33k.lit.api.LitStateProps;
 import com.m4thg33k.lit.api.furnace.FurnaceTypes;
@@ -26,14 +27,14 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
     private boolean isBlockDark;
 
     public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class);
-    public static final PropertyBool IS_DARK = PropertyBool.create("isDark");
+    public static final PropertyBool IS_DARK = PropertyBool.create("dark");
 
     public GemFurnaceBlock(boolean dark)
     {
         super();
         this.isBlockDark = dark;
 
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false).withProperty(IS_DARK,false));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false).withProperty(IS_DARK,isBlockDark));
     }
 
     @Override
@@ -53,18 +54,24 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, isBlockDark ?EnumGem.values()[meta-16]:EnumGem.values()[meta]).withProperty(IS_DARK, isBlockDark);
+        return getDefaultState().withProperty(VARIANT, isBlockDark ?EnumGem.values()[meta+16]:EnumGem.values()[meta]).withProperty(IS_DARK, isBlockDark);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0);
+        LogHelper.info("Getting meta from state and returning: " + state.getValue(VARIANT).name() + " and " + ((state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0)));
+        if ((state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0)<0)
+        {
+            LogHelper.error("DANGER!");
+        }
+        return (state.getValue(VARIANT).ordinal()) - (state.getValue(IS_DARK)?16:0);
+//        return (state.getValue(VARIANT).ordinal()) + (isBlockDark ?16:0);
     }
 
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
         TileImprovedFurnace tileImprovedFurnace = (TileImprovedFurnace)worldIn.getTileEntity(pos);
-        return state.withProperty(ON,tileImprovedFurnace.getOn()).withProperty(LitStateProps.CARDINALS,tileImprovedFurnace.getFacing());
+        return state.withProperty(ON,tileImprovedFurnace.getOn()).withProperty(LitStateProps.CARDINALS,tileImprovedFurnace.getFacing()).withProperty(IS_DARK,isBlockDark);
     }
 
     @Override

@@ -5,12 +5,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 
-    public static GemFurnaceBlock gemFurnaceBlock = new GemFurnaceBlock(false);
-    public static GemFurnaceBlock darkGemFurnaceBlock = new GemFurnaceBlock(true);
+    public static GemFurnaceBlock gemFurnaceBlock;// = new GemFurnaceBlock(false);
+    public static GemFurnaceBlock darkGemFurnaceBlock;// = new GemFurnaceBlock(true);
 
     public static void createBlocks()
     {
+        gemFurnaceBlock = new GemFurnaceBlock(false);
+        darkGemFurnaceBlock = new GemFurnaceBlock(true);
+
         GameRegistry.registerBlock(gemFurnaceBlock, Names.GEM_FURNACE);
-        GameRegistry.registerBlock(darkGemFurnaceBlock, Names.GEM_FURNACE);
+        GameRegistry.registerBlock(darkGemFurnaceBlock, Names.DARK_GEM_FURNACE);
     }
 }

@@ -41,10 +41,10 @@ public class Gemulation {
         proxy.postInit(e);
     }
 
-    public static CreativeTabs tabGemulation = new CreativeTabs("tabGemulation") {
-        @Override
-        public Item getTabIconItem() {
-            return Item.getItemFromBlock(Blocks.nether_wart);
-        }
-    };
+//    public static CreativeTabs tabGemulation = new CreativeTabs("tabGemulation") {
+//        @Override
+//        public Item getTabIconItem() {
+//            return Item.getItemFromBlock(Blocks.snow);
+//        }
+//    };
 }
