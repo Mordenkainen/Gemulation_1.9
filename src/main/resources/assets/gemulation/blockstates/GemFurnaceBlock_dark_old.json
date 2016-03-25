@@ -5,10 +5,6 @@
 		"transform": "forge:default-block"
 	},
 	"variants": {
-		"dark": {
-			"true" : {},
-			"false": {}
-		},
 		"facing=north,on=true,variant=ruby": [{
 			"textures":{
 				"front": "gemulation:blocks/FurnaceGemBlockOn0",

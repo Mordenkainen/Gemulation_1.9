@@ -29,7 +29,7 @@ public class GemFurnaceItemBlock extends ItemBlock{
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName(stack) + "_" + stack.getItemDamage();
+        return super.getUnlocalizedName(stack) + "_" + stack.getItemDamage()%16;
     }
 
     @Override
