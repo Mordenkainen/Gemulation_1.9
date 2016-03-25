@@ -1,5 +1,6 @@
 package com.m4thg33k.gemulation.blocks;
 
+import com.m4thg33k.gemulation.blocks.itemBlocks.GemFurnaceItemBlock;
 import com.m4thg33k.gemulation.lib.Names;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -13,7 +14,7 @@ public class ModBlocks {
         gemFurnaceBlock = new GemFurnaceBlock(false);
         darkGemFurnaceBlock = new GemFurnaceBlock(true);
 
-        GameRegistry.registerBlock(gemFurnaceBlock, Names.GEM_FURNACE);
-        GameRegistry.registerBlock(darkGemFurnaceBlock, Names.DARK_GEM_FURNACE);
+        GameRegistry.registerBlock(gemFurnaceBlock, GemFurnaceItemBlock.class, Names.GEM_FURNACE);
+        GameRegistry.registerBlock(darkGemFurnaceBlock,GemFurnaceItemBlock.class, Names.DARK_GEM_FURNACE);
     }
 }

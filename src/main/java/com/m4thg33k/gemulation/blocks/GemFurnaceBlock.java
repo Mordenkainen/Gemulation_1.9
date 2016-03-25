@@ -1,12 +1,11 @@
 package com.m4thg33k.gemulation.blocks;
 
-import com.m4thg33k.gemulation.core.util.LogHelper;
 import com.m4thg33k.gemulation.core.util.StringHelper;
+import com.m4thg33k.gemulation.lib.Names;
 import com.m4thg33k.lit.api.LitStateProps;
 import com.m4thg33k.lit.api.furnace.FurnaceTypes;
 import com.m4thg33k.lit.blocks.ImprovedFurnaceBlock;
 import com.m4thg33k.lit.tiles.TileImprovedFurnace;
-import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -27,19 +26,19 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
     private boolean isBlockDark;
 
     public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class);
-    public static final PropertyBool IS_DARK = PropertyBool.create("dark");
 
     public GemFurnaceBlock(boolean dark)
     {
         super();
         this.isBlockDark = dark;
 
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false).withProperty(IS_DARK,isBlockDark));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false));
+        this.setUnlocalizedName(Names.GEM_FURNACE);
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, LitStateProps.CARDINALS,IS_DARK,ON,VARIANT);
+        return new BlockStateContainer(this, LitStateProps.CARDINALS,ON,VARIANT);
     }
 
 
@@ -54,33 +53,37 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(VARIANT, isBlockDark ?EnumGem.values()[meta+16]:EnumGem.values()[meta]).withProperty(IS_DARK, isBlockDark);
+        return getDefaultState().withProperty(VARIANT, EnumGem.values()[meta+(isBlockDark?16:0)]);
+//        return getDefaultState().withProperty(VARIANT, isBlockDark ? EnumGem.values()[meta+16] : EnumGem.values()[meta]);
     }
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        LogHelper.info("Getting meta from state and returning: " + state.getValue(VARIANT).name() + " and " + ((state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0)));
-        if ((state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0)<0)
-        {
-            LogHelper.error("DANGER!");
-        }
-        return (state.getValue(VARIANT).ordinal()) - (state.getValue(IS_DARK)?16:0);
+        return (state.getValue(VARIANT).ordinal())%16;
+//        LogHelper.info("Getting meta from state and returning: " + state.getValue(VARIANT).name() + " and " + ((state.getValue(VARIANT).ordinal()) - (isBlockDark ?16:0)));
+//        if (((state.getValue(VARIANT).ordinal()) - (isBlockDark?16:0))<0)
+//        {
+//            LogHelper.error("DANGER!");
+//        }
+//        return (state.getValue(VARIANT).ordinal()) - (isBlockDark?16:0);
 //        return (state.getValue(VARIANT).ordinal()) + (isBlockDark ?16:0);
     }
 
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
         TileImprovedFurnace tileImprovedFurnace = (TileImprovedFurnace)worldIn.getTileEntity(pos);
-        return state.withProperty(ON,tileImprovedFurnace.getOn()).withProperty(LitStateProps.CARDINALS,tileImprovedFurnace.getFacing()).withProperty(IS_DARK,isBlockDark);
+        return state.withProperty(ON,tileImprovedFurnace.getOn()).withProperty(LitStateProps.CARDINALS,tileImprovedFurnace.getFacing());
     }
 
     @Override
     public TileEntity createTileEntity(World world, IBlockState state) {
-        return new TileImprovedFurnace(FurnaceTypes.getTypeByName(StringHelper.splitCamelCase(state.getValue(VARIANT).name())));
+        return new TileImprovedFurnace(FurnaceTypes.getTypeByName(StringHelper.splitCamelCase(state.getValue(VARIANT).getGemName())));
     }
 
     @Override
     public String getUnlocalizedName() {
         return super.getUnlocalizedName() + (isBlockDark ?"_dark":"");
     }
+
+
 }

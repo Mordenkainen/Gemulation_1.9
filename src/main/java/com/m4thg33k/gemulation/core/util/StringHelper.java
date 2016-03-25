@@ -13,4 +13,13 @@ public class StringHelper {
                 " "
         );
     }
+
+    public static String limitToNCharacters(String s,int n)
+    {
+        if (s.length()>n)
+        {
+            return s.substring(0,n);
+        }
+        return s;
+    }
 }
