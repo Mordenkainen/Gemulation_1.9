@@ -1,5 +1,6 @@
 package com.m4thg33k.gemulation;
 
+import com.m4thg33k.gemulation.blocks.ModBlocks;
 import com.m4thg33k.gemulation.core.proxies.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -10,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Gemulation.MODID,name = Gemulation.MODNAME, version = Gemulation.VERSION, dependencies = "required-after:SilentGems@[2.0.0-alpha,);required-after:lit@[1.0.0,)")
+@Mod(modid = Gemulation.MODID,name = Gemulation.MODNAME, version = Gemulation.VERSION, dependencies = "required-after:SilentGems@[2.0.0-alpha,);required-after:lit@[1.0.3,)")
 public class Gemulation {
 
     public static final String MODID = "gemulation";
@@ -41,10 +42,10 @@ public class Gemulation {
         proxy.postInit(e);
     }
 
-//    public static CreativeTabs tabGemulation = new CreativeTabs("tabGemulation") {
-//        @Override
-//        public Item getTabIconItem() {
-//            return Item.getItemFromBlock(Blocks.snow);
-//        }
-//    };
+    public static CreativeTabs tabGemulation = new CreativeTabs("tabGemulation") {
+        @Override
+        public Item getTabIconItem() {
+            return Item.getItemFromBlock(ModBlocks.gemFurnaceBlock);
+        }
+    };
 }

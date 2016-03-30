@@ -1,12 +1,12 @@
 package com.m4thg33k.gemulation.blocks;
 
+import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.core.util.StringHelper;
 import com.m4thg33k.gemulation.lib.Names;
 import com.m4thg33k.lit.api.LitStateProps;
 import com.m4thg33k.lit.api.furnace.FurnaceTypes;
 import com.m4thg33k.lit.blocks.ImprovedFurnaceBlock;
 import com.m4thg33k.lit.tiles.TileImprovedFurnace;
-import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -20,21 +20,25 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.silentchaos512.gems.lib.EnumGem;
 
+import java.util.EnumSet;
 import java.util.List;
 
+/**
+ * This class is only for the light gems
+ */
 public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
-    private boolean isBlockDark;
 
-    public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class);
+    public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class, EnumSet.range(EnumGem.RUBY,EnumGem.OPAL));
+//    public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class);
 
-    public GemFurnaceBlock(boolean dark)
+    public GemFurnaceBlock()
     {
         super();
-        this.isBlockDark = dark;
 
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false));
         this.setUnlocalizedName(Names.GEM_FURNACE);
+        this.setCreativeTab(Gemulation.tabGemulation);
     }
 
     @Override
@@ -61,7 +65,7 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
 
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (state.getValue(VARIANT)).ordinal()&15;
+        return (state.getValue(VARIANT)).ordinal();
 //        return (state.getValue(VARIANT).ordinal())%16;
     }
 
@@ -76,10 +80,6 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
         return new TileImprovedFurnace(FurnaceTypes.getTypeByName(StringHelper.splitCamelCase(state.getValue(VARIANT).getGemName())));
     }
 
-    @Override
-    public String getUnlocalizedName() {
-        return super.getUnlocalizedName() + (isBlockDark ?"_dark":"");
-    }
 
 
 }

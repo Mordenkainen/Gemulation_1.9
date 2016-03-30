@@ -26,11 +26,13 @@ public class RenderRegisters {
             {
 //                LogHelper.info("Registering render for: " + type.name() + " with ordinal " + ord + " and meta " + ord);
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemFurnaceBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_FURNACE,"facing=north,on=false,variant="+type.name()));
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemChestBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CHEST,"variant="+type.name()));
             }
             else
             {
 //                LogHelper.info("Registering render for: " + type.name() + " with ordinal " + ord + " and meta " + (ord-16));
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemFurnaceBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_FURNACE,"facing=north,on=false,variant="+type.name()));
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemChestBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CHEST,"variant="+type.name()));
             }
 //            boolean isDark = type.ordinal()<16;
 //            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(isDark? ModBlocks.gemFurnaceBlock:ModBlocks.darkGemFurnaceBlock),isDark?type.ordinal()-16:type.ordinal(),new ModelResourceLocation(Gemulation.MODID+":"+ Names.GEM_FURNACE,"facing=north,isDark="+isDark+",on=false,variant="+ type.name()));

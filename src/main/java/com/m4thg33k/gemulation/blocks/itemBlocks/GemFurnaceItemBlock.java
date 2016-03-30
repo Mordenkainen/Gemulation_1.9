@@ -1,5 +1,6 @@
 package com.m4thg33k.gemulation.blocks.itemBlocks;
 
+import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.core.util.StringHelper;
 import com.m4thg33k.gemulation.lib.Constants;
 import net.minecraft.block.Block;
@@ -19,7 +20,7 @@ public class GemFurnaceItemBlock extends ItemBlock{
         super(block);
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
-        //// TODO: 3/24/2016 set creative tab
+        this.setCreativeTab(Gemulation.tabGemulation);
     }
 
     @Override
@@ -29,7 +30,7 @@ public class GemFurnaceItemBlock extends ItemBlock{
 
     @Override
     public String getUnlocalizedName(ItemStack stack) {
-        return super.getUnlocalizedName(stack) + "_" + stack.getItemDamage()%16;
+        return super.getUnlocalizedName(stack) + "_" + stack.getItemDamage();
     }
 
     @Override
