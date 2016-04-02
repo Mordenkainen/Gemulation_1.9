@@ -11,6 +11,10 @@ public class ModBlocks {
     public static DarkGemFurnaceBlock darkGemFurnaceBlock = new DarkGemFurnaceBlock();
     public static GemChestBlock gemChestBlock = new GemChestBlock();
     public static DarkGemChestBlock darkGemChestBlock = new DarkGemChestBlock();
+    public static SuperGemChestBlock superGemChestBlock = new SuperGemChestBlock();
+    public static DarkSuperGemChestBlock darkSuperGemChestBlock = new DarkSuperGemChestBlock();
+
+    public static GemChangerBlock gemChangerBlock = new GemChangerBlock();
 
     public static void createBlocks()
     {
@@ -19,5 +23,9 @@ public class ModBlocks {
         GameRegistry.registerBlock(darkGemFurnaceBlock,GemFurnaceItemBlock.class, Names.DARK_GEM_FURNACE);
         GameRegistry.registerBlock(gemChestBlock, GemChestItemBlock.class,Names.GEM_CHEST);
         GameRegistry.registerBlock(darkGemChestBlock, GemChestItemBlock.class,Names.DARK_GEM_CHEST);
+        GameRegistry.registerBlock(superGemChestBlock,GemChestItemBlock.class,Names.SUPER_GEM_CHEST);
+        GameRegistry.registerBlock(darkSuperGemChestBlock,GemChestItemBlock.class,Names.DARK_SUPER_GEM_CHEST);
+
+        GameRegistry.registerBlock(gemChestBlock,Names.GEM_CHANGER);
     }
 }

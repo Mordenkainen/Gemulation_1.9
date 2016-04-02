@@ -8,6 +8,7 @@ import com.m4thg33k.lit.api.chest.ChestTypes;
 import com.m4thg33k.lit.api.furnace.FurnaceTypes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.oredict.OreDictionary;
 import net.silentchaos512.gems.item.ModItems;
 import net.silentchaos512.gems.lib.EnumGem;
 
@@ -21,23 +22,34 @@ public class MiscInits {
 
         for (EnumGem type : EnumSet.range(EnumGem.RUBY,EnumGem.OPAL))
         {
-            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.gemFurnaceBlock,1,type.ordinal()),new ItemStack(ModItems.gem,1,type.ordinal()));
+            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.gemFurnaceBlock,1,type.ordinal()),new ItemStack(ModItems.gem,1,type.ordinal()),false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedFurnaceBlock,1),new ItemStack(ModBlocks.gemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE));
         }
         for (EnumGem type : EnumSet.range(EnumGem.CARNELIAN,EnumGem.ALEXANDRITE))
         {
-            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,type.ordinal()%16),new ItemStack(ModItems.gem,1,type.ordinal()));
+            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,type.ordinal()%16),new ItemStack(ModItems.gem,1,type.ordinal()),false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedFurnaceBlock),new ItemStack(ModBlocks.gemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE));
         }
     }
 
     public static void addChestTypes()
     {
+        //standard
         for (EnumGem type : EnumSet.range(EnumGem.RUBY, EnumGem.OPAL))
         {
-            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),184,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChest" + type.ordinal() + ".png"),new ItemStack(ModItems.gem,1,type.ordinal()),new ItemStack(ModBlocks.gemChestBlock,1,type.ordinal()),false);
+            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),184,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChest" + type.ordinal() + ".png"),new ItemStack(ModItems.gem,1,type.ordinal()),new ItemStack(ModBlocks.gemChestBlock,1,type.ordinal()),false,false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedChestBlock),new ItemStack(ModBlocks.gemChestBlock,1, OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1, OreDictionary.WILDCARD_VALUE));
         }
         for (EnumGem type : EnumSet.range(EnumGem.CARNELIAN,EnumGem.ALEXANDRITE))
         {
-            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),187,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChestDark" + (type.ordinal()-16) + ".png"),new ItemStack(ModItems.gem,1,type.ordinal()),new ItemStack(ModBlocks.darkGemChestBlock,1,type.ordinal()-16),false);
+            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),187,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChestDark" + (type.ordinal()-16) + ".png"),new ItemStack(ModItems.gem,1,type.ordinal()),new ItemStack(ModBlocks.darkGemChestBlock,1,type.ordinal()-16),false,false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedChestBlock),new ItemStack(ModBlocks.gemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1, OreDictionary.WILDCARD_VALUE));
+        }
+
+        //supercharged
+        for (EnumGem type : EnumSet.range(EnumGem.RUBY,EnumGem.OPAL))
+        {
+            ChestTypes.addType("Super " + StringHelper.splitCamelCase(type.getGemName()),108,true,new ResourceLocation(Gemulation.MODID,"textures/gui/SuperGemChest.png"),238,256,9,12,new ResourceLocation(Gemulation.MODID,"textures/model/SuperGemChest" + type.ordinal() + ".png"),type.getItemSuper(),new ItemStack(ModBlocks.superGemChestBlock,1,type.ordinal()),true,true,new ItemStack(ModBlocks.gemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.superGemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkSuperGemChestBlock,1,OreDictionary.WILDCARD_VALUE));
+        }
+        for (EnumGem type : EnumSet.range(EnumGem.CARNELIAN,EnumGem.ALEXANDRITE))
+        {
+            ChestTypes.addType("Super " + StringHelper.splitCamelCase(type.getGemName()),108,true,new ResourceLocation(Gemulation.MODID,"textures/gui/SuperGemChest.png"),238,256,9,12,new ResourceLocation(Gemulation.MODID,"textures/model/SuperGemChestDark" + (type.ordinal()-16) + ".png"),type.getItemSuper(),new ItemStack(ModBlocks.darkSuperGemChestBlock,1,type.ordinal()-16),true,true,new ItemStack(ModBlocks.gemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.superGemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkSuperGemChestBlock,1,OreDictionary.WILDCARD_VALUE));
         }
     }
 

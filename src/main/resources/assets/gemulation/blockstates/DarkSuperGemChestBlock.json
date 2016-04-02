@@ -1,0 +1,219 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "lit:chest_dummy",
+    "transform": "forge:default-block",
+    "textures":
+    {
+      "material": "lit:model/ImprovedChest",
+      "particle": "lit:model/ImprovedChest"
+    }
+  },
+  "variants": {
+    "inventory" :
+    [{
+      "transform": {
+        "thirdperson" : {
+          "scale": 10
+        }
+      }
+    }],
+    "variant":
+    {
+      "ruby": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest0",
+          "particle": "silentgems:blocks/GemBlock0"
+        }
+      },
+      "garnet": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest1",
+          "particle": "silentgems:blocks/GemBlock1"
+        }
+      },
+      "topaz": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest2",
+          "particle": "silentgems:blocks/GemBlock2"
+        }
+      },
+      "amber": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest3",
+          "particle": "silentgems:blocks/GemBlock3"
+        }
+      },
+      "heliodor": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest4",
+          "particle": "silentgems:blocks/GemBlock4"
+        }
+      },
+      "peridot": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest5",
+          "particle": "silentgems:blocks/GemBlock5"
+        }
+      },
+      "beryl": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest6",
+          "particle": "silentgems:blocks/GemBlock6"
+        }
+      },
+      "indicolite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest7",
+          "particle": "silentgems:blocks/GemBlock7"
+        }
+      },
+      "aquamarine": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest8",
+          "particle": "silentgems:blocks/GemBlock8"
+        }
+      },
+      "sapphire": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest9",
+          "particle": "silentgems:blocks/GemBlock9"
+        }
+      },
+      "iolite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest10",
+          "particle": "silentgems:blocks/GemBlock10"
+        }
+      },
+      "amethyst": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest11",
+          "particle": "silentgems:blocks/GemBlock11"
+        }
+      },
+      "agate": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest12",
+          "particle": "silentgems:blocks/GemBlock12"
+        }
+      },
+      "morganite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest13",
+          "particle": "silentgems:blocks/GemBlock13"
+        }
+      },
+      "onyx": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest14",
+          "particle": "silentgems:blocks/GemBlock14"
+        }
+      },
+      "opal": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChest15",
+          "particle": "silentgems:blocks/GemBlock15"
+        }
+      },
+      "carnelian": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark0",
+          "particle": "silentgems:blocks/GemBlockDark0"
+        }
+      },
+      "spinel": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark1",
+          "particle": "silentgems:blocks/GemBlockDark1"
+        }
+      },
+      "citrine": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark2",
+          "particle": "silentgems:blocks/GemBlockDark2"
+        }
+      },
+      "jasper": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark3",
+          "particle": "silentgems:blocks/GemBlockDark3"
+        }
+      },
+      "golden_beryl": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark4",
+          "particle": "silentgems:blocks/GemBlockDark4"
+        }
+      },
+      "moldavite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark5",
+          "particle": "silentgems:blocks/GemBlockDark5"
+        }
+      },
+      "malachite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark6",
+          "particle": "silentgems:blocks/GemBlockDark6"
+        }
+      },
+      "turquoise": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark7",
+          "particle": "silentgems:blocks/GemBlockDark7"
+        }
+      },
+      "moonstone": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark8",
+          "particle": "silentgems:blocks/GemBlockDark8"
+        }
+      },
+      "blue_topaz": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark9",
+          "particle": "silentgems:blocks/GemBlockDark9"
+        }
+      },
+      "tanzanite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark10",
+          "particle": "silentgems:blocks/GemBlockDark10"
+        }
+      },
+      "violet_sapphire": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark11",
+          "particle": "silentgems:blocks/GemBlockDark11"
+        }
+      },
+      "lepidolite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark12",
+          "particle": "silentgems:blocks/GemBlockDark12"
+        }
+      },
+      "ametrine": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark13",
+          "particle": "silentgems:blocks/GemBlockDark13"
+        }
+      },
+      "black_diamond": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark14",
+          "particle": "silentgems:blocks/GemBlockDark14"
+        }
+      },
+      "alexandrite": {
+        "textures": {
+          "material": "gemulation:model/SuperGemChestDark15",
+          "particle": "silentgems:blocks/GemBlockDark15"
+        }
+      }
+    },
+    "normal": [{
+    }]
+  }
+}

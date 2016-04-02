@@ -78,6 +78,39 @@ tile.DarkGemChestBlock_13.name=Ametrine Chest
 tile.DarkGemChestBlock_14.name=Black Diamond Chest
 tile.DarkGemChestBlock_15.name=Alexandrite Chest
 
+tile.SuperGemChestBlock_0.name=Supercharged Ruby Chest
+tile.SuperGemChestBlock_1.name=Supercharged Garnet Chest
+tile.SuperGemChestBlock_2.name=Supercharged Topaz Chest
+tile.SuperGemChestBlock_3.name=Supercharged Amber Chest
+tile.SuperGemChestBlock_4.name=Supercharged Heliodor Chest
+tile.SuperGemChestBlock_5.name=Supercharged Peridot Chest
+tile.SuperGemChestBlock_6.name=Supercharged Beryl Chest
+tile.SuperGemChestBlock_7.name=Supercharged Indicolite Chest
+tile.SuperGemChestBlock_8.name=Supercharged Aquamarine Chest
+tile.SuperGemChestBlock_9.name=Supercharged Sapphire Chest
+tile.SuperGemChestBlock_10.name=Supercharged Iolite Chest
+tile.SuperGemChestBlock_11.name=Supercharged Amethyst Chest
+tile.SuperGemChestBlock_12.name=Supercharged Agate Chest
+tile.SuperGemChestBlock_13.name=Supercharged Morganite Chest
+tile.SuperGemChestBlock_14.name=Supercharged Onyx Chest
+tile.SuperGemChestBlock_15.name=Supercharged Opal Chest
+tile.DarkSuperGemChestBlock_0.name=Supercharged Carnelian Chest
+tile.DarkSuperGemChestBlock_1.name=Supercharged Spinel Chest
+tile.DarkSuperGemChestBlock_2.name=Supercharged Citrine Chest
+tile.DarkSuperGemChestBlock_3.name=Supercharged Jasper Chest
+tile.DarkSuperGemChestBlock_4.name=Supercharged Golden Beryl Chest
+tile.DarkSuperGemChestBlock_5.name=Supercharged Moldavite Chest
+tile.DarkSuperGemChestBlock_6.name=Supercharged Malachite Chest
+tile.DarkSuperGemChestBlock_7.name=Supercharged Turquoise Chest
+tile.DarkSuperGemChestBlock_8.name=Supercharged Moonstone Chest
+tile.DarkSuperGemChestBlock_9.name=Supercharged Blue Topaz Chest
+tile.DarkSuperGemChestBlock_10.name=Supercharged Tanzanite Chest
+tile.DarkSuperGemChestBlock_11.name=Supercharged Violet Sapphire Chest
+tile.DarkSuperGemChestBlock_12.name=Supercharged Lepidolite Chest
+tile.DarkSuperGemChestBlock_13.name=Supercharged Ametrine Chest
+tile.DarkSuperGemChestBlock_14.name=Supercharged Black Diamond Chest
+tile.DarkSuperGemChestBlock_15.name=Supercharged Alexandrite Chest
+
 #-------------------------------------------------------------------
 # Items
 #-------------------------------------------------------------------

@@ -10,6 +10,9 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 
 public class GemulationGuiHandler implements IGuiHandler{
     public static final int GEM_CHEST_GUI = 0;
+    public static final int GEM_CHANGER_GUI = 1;
+
+    //// TODO: 3/31/2016 GEM CHANGER GUI
 
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
