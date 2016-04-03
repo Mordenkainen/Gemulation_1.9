@@ -3,6 +3,7 @@ package com.m4thg33k.gemulation.blocks.itemBlocks;
 import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.core.util.StringHelper;
 import com.m4thg33k.gemulation.lib.Constants;
+import com.m4thg33k.gemulation.lib.Names;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
@@ -21,6 +22,8 @@ public class GemFurnaceItemBlock extends ItemBlock{
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
         this.setCreativeTab(Gemulation.tabGemulation);
+
+        this.setRegistryName(Gemulation.MODID, Names.GEM_FURNACE);
     }
 
     @Override

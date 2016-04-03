@@ -26,6 +26,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(superGemChestBlock,GemChestItemBlock.class,Names.SUPER_GEM_CHEST);
         GameRegistry.registerBlock(darkSuperGemChestBlock,GemChestItemBlock.class,Names.DARK_SUPER_GEM_CHEST);
 
-        GameRegistry.registerBlock(gemChestBlock,Names.GEM_CHANGER);
+        GameRegistry.registerBlock(gemChangerBlock,Names.GEM_CHANGER);
+
     }
 }

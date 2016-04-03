@@ -39,6 +39,8 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false));
         this.setUnlocalizedName(Names.GEM_FURNACE);
         this.setCreativeTab(Gemulation.tabGemulation);
+
+        this.setRegistryName(Gemulation.MODID,Names.GEM_FURNACE);
     }
 
     @Override
