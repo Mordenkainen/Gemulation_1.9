@@ -12,13 +12,13 @@
       }
     }],
     "inventory": [{
-      "gui": [{
+      "gui": {
         "transform": {
-          "translation": [0.5,0.5,0.5],
-          "rotation": [30,255,0],
+          "translation": [0,0,0],
+          "rotation": [{"x":30},{"y":255}],
           "scale": 3
         }
-      }],
+      },
       "ground": {},
       "fixed": {},
       "thirdperson_righthand": {},
