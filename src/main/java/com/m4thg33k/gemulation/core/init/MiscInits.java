@@ -22,11 +22,11 @@ public class MiscInits {
 
         for (EnumGem type : EnumSet.range(EnumGem.RUBY,EnumGem.OPAL))
         {
-            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.gemFurnaceBlock,1,type.ordinal()),type.getItem(),false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedFurnaceBlock,1),new ItemStack(ModBlocks.gemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE));
+            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.gemFurnaceBlock,1,type.ordinal()),type.getItemOreName(),false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedFurnaceBlock,1),new ItemStack(ModBlocks.gemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE));
         }
         for (EnumGem type : EnumSet.range(EnumGem.CARNELIAN,EnumGem.ALEXANDRITE))
         {
-            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,type.ordinal()%16),type.getItem(),false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedFurnaceBlock),new ItemStack(ModBlocks.gemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE));
+            FurnaceTypes.addType(StringHelper.splitCamelCase(type.getGemName()),Constants.getCookFactor(type),Constants.getUpgradeCount(type),Constants.baseFuelBoost(type),Constants.getFuelCap(type),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,type.ordinal()%16),type.getItemOreName(),false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedFurnaceBlock),new ItemStack(ModBlocks.gemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemFurnaceBlock,1,OreDictionary.WILDCARD_VALUE));
         }
     }
 

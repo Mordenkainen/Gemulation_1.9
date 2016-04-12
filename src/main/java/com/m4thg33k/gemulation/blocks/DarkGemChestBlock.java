@@ -40,6 +40,15 @@ public class DarkGemChestBlock extends ImprovedChestBlock{
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.CARNELIAN));
         this.setUnlocalizedName(Names.DARK_GEM_CHEST);
         this.setCreativeTab(Gemulation.tabGemulation);
+
+        //handleReg();
+
+    }
+
+    @Override
+    protected void handleRegName()
+    {
+        this.setRegistryName(Gemulation.MODID,Names.DARK_GEM_CHEST);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.m4thg33k.gemulation.blocks;
 
+import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.core.util.StringHelper;
 import com.m4thg33k.gemulation.lib.Names;
 import com.m4thg33k.lit.api.chest.ChestTypes;
@@ -15,6 +16,13 @@ public class DarkSuperGemChestBlock extends DarkGemChestBlock{
         super();
 
         this.setUnlocalizedName(Names.DARK_SUPER_GEM_CHEST);
+
+
+    }
+
+    @Override
+    protected void handleRegName() {
+        this.setRegistryName(Gemulation.MODID,Names.DARK_SUPER_GEM_CHEST);
     }
 
     @Override

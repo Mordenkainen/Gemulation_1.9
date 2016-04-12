@@ -14,6 +14,13 @@ public class BaseBlock extends Block {
         this.setUnlocalizedName(unlocalizedName);
         this.setHardness(hardness);
         this.setResistance(resistance);
+
+        handleRegName();
+    }
+
+    protected void handleRegName()
+    {
+
     }
 
     public BaseBlock(String unlocalizedName, float hardness, float resistance)

@@ -39,5 +39,7 @@ public class RenderRegisters {
 //            boolean isDark = type.ordinal()<16;
 //            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(isDark? ModBlocks.gemFurnaceBlock:ModBlocks.darkGemFurnaceBlock),isDark?type.ordinal()-16:type.ordinal(),new ModelResourceLocation(Gemulation.MODID+":"+ Names.GEM_FURNACE,"facing=north,isDark="+isDark+",on=false,variant="+ type.name()));
         }
+
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemChangerBlock),0,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CHANGER,"inventory"));
     }
 }

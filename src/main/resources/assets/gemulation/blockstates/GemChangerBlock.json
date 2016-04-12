@@ -12,9 +12,19 @@
       }
     }],
     "inventory": [{
-      "transform": {
-        "translation": [0.5,0.5,0.5]
-      }
+      "gui": [{
+        "transform": {
+          "translation": [0.5,0.5,0.5],
+          "rotation": [30,255,0],
+          "scale": 3
+        }
+      }],
+      "ground": {},
+      "fixed": {},
+      "thirdperson_righthand": {},
+      "thirdperson_lefthand": {},
+      "firstperson_righthand": {},
+      "firstperson_lefthand": {}
     }]
   }
 }

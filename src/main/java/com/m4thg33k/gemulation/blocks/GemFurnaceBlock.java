@@ -40,6 +40,11 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
         this.setUnlocalizedName(Names.GEM_FURNACE);
         this.setCreativeTab(Gemulation.tabGemulation);
 
+
+    }
+
+    @Override
+    protected void handleRegName() {
         this.setRegistryName(Gemulation.MODID,Names.GEM_FURNACE);
     }
 

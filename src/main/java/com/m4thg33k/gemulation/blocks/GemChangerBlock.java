@@ -26,6 +26,11 @@ public class GemChangerBlock extends BaseBlockNotNormal {
     }
 
     @Override
+    protected void handleRegName() {
+        this.setRegistryName(Gemulation.MODID,Names.GEM_CHANGER);
+    }
+
+    @Override
     public boolean hasTileEntity(IBlockState state) {
         return true;
     }

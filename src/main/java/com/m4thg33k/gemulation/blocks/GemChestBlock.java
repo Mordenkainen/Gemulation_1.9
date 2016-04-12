@@ -38,6 +38,15 @@ public class GemChestBlock extends ImprovedChestBlock {
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY));
         this.setUnlocalizedName(Names.GEM_CHEST);
         this.setCreativeTab(Gemulation.tabGemulation);
+
+//        handleRegName();
+        //this.setRegistryName(Gemulation.MODID,Names.GEM_CHEST);
+    }
+
+    @Override
+    protected void handleRegName()
+    {
+        this.setRegistryName(Gemulation.MODID,Names.GEM_CHEST);
     }
 
     @Override

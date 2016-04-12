@@ -6,16 +6,16 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class GemChestItemBlock extends ItemBlock {
+public class SuperGemChestItemBlock extends ItemBlock {
 
-    public GemChestItemBlock(Block block)
+    public SuperGemChestItemBlock(Block block)
     {
         super(block);
 
         this.setMaxDamage(0);
         this.setHasSubtypes(true);
 
-        this.setRegistryName(Gemulation.MODID, Names.GEM_CHEST);
+        this.setRegistryName(Gemulation.MODID, Names.SUPER_GEM_CHEST);
     }
 
     @Override

@@ -34,6 +34,13 @@ public class DarkGemFurnaceBlock extends ImprovedFurnaceBlock{
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.CARNELIAN).withProperty(LitStateProps.CARDINALS, EnumFacing.NORTH).withProperty(ON,false));
         this.setUnlocalizedName(Names.DARK_GEM_FURNACE);
         this.setCreativeTab(Gemulation.tabGemulation);
+
+
+    }
+
+    @Override
+    protected void handleRegName() {
+        this.setRegistryName(Gemulation.MODID,Names.DARK_GEM_FURNACE);
     }
 
     @Override
