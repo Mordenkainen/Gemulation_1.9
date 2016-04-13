@@ -14,7 +14,7 @@ public class SlotGem extends SlotVariableInput{
         super(inv, index, xpos, ypos, allowInsertion,allowRemoval);
         this.gemData = gemData;
 
-        this.setBackgroundLocation(new ResourceLocation("silentgems:textures/items/Gem"+gemData));
+//        this.setBackgroundLocation(new ResourceLocation("silentgems:textures/items/Gem"+gemData));
     }
 
     //only allow gems with the corresponding data to be placed in this slot
@@ -25,8 +25,8 @@ public class SlotGem extends SlotVariableInput{
         return this.allowInsertion && (stack.getItem() == ModItems.gem && stack.getItemDamage()==gemData);
     }
 
-    @Override
-    public ResourceLocation getBackgroundLocation() {
-        return new ResourceLocation("silentgems:/textures/items/Gem"+gemData);
-    }
+//    @Override
+//    public ResourceLocation getBackgroundLocation() {
+//        return new ResourceLocation("silentgems:/textures/items/Gem"+gemData);
+//    }
 }
