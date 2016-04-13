@@ -1,5 +1,8 @@
 package com.m4thg33k.gemulation.gui;
 
+import com.m4thg33k.gemulation.client.gui.GuiGemChanger;
+import com.m4thg33k.gemulation.inventory.ContainerGemChanger;
+import com.m4thg33k.gemulation.tiles.TileGemChanger;
 import com.m4thg33k.lit.client.gui.GuiImprovedChest;
 import com.m4thg33k.lit.inventory.ContainerImprovedChest;
 import com.m4thg33k.lit.tiles.TileImprovedChest;
@@ -12,14 +15,14 @@ public class GemulationGuiHandler implements IGuiHandler{
     public static final int GEM_CHEST_GUI = 0;
     public static final int GEM_CHANGER_GUI = 1;
 
-    //// TODO: 3/31/2016 GEM CHANGER GUI
-
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         switch (ID){
             case 0:
                 TileImprovedChest tile = (TileImprovedChest)world.getTileEntity(new BlockPos(x,y,z));
                 return new ContainerImprovedChest(player.inventory,tile,tile.getType());
+            case 1:
+                return new ContainerGemChanger(player.inventory,(TileGemChanger)world.getTileEntity(new BlockPos(x,y,z)));
             default:
                 return null;
         }
@@ -32,6 +35,8 @@ public class GemulationGuiHandler implements IGuiHandler{
             case 0:
                 TileImprovedChest tile = (TileImprovedChest)world.getTileEntity(new BlockPos(x,y,z));
                 return new GuiImprovedChest(tile.getType(),player.inventory,tile);
+            case 1:
+                return new GuiGemChanger(player.inventory,(TileGemChanger)world.getTileEntity(new BlockPos(x,y,z)));
             default:
                 return null;
         }
