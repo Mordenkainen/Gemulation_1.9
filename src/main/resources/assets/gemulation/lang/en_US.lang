@@ -5,7 +5,7 @@ itemGroup.tabGemulation=Gemulation
 #-------------------------------------------------------------------
 # Containers
 #-------------------------------------------------------------------
-container.GemChangerblock=Gem Transmutation Device
+container.GemChangerBlock=Gem Transmutation Device
 #-------------------------------------------------------------------
 # Blocks
 #-------------------------------------------------------------------
@@ -43,7 +43,7 @@ tile.GemFurnaceBlock_dark_13.name=Ametrine Furnace
 tile.GemFurnaceBlock_dark_14.name=Black Diamond Furnace
 tile.GemFurnaceBlock_dark_15.name=Alexendrite Furnace
 
-tile.GemChangerblock.name=Gem Transmutation Device
+tile.GemChangerBlock.name=Gem Transmutation Device
 
 tile.GemChestBlock_0.name=Ruby Chest
 tile.GemChestBlock_1.name=Garnet Chest
