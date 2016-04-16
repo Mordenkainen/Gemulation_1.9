@@ -39,7 +39,7 @@ public class DarkGemFurnaceBlock extends ImprovedFurnaceBlock{
     }
 
     @Override
-    protected void handleRegName() {
+    public void handleRegName() {
         this.setRegistryName(Gemulation.MODID,Names.DARK_GEM_FURNACE);
     }
 

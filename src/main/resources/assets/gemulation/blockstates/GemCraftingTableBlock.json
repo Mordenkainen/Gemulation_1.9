@@ -1,0 +1,255 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_bottom_top",
+    "transform": "forge:default-block",
+    "textures": {
+      "side": "lit:blocks/ImprovedCraftingTableSide",
+      "top": "lit:blocks/ImprovedCraftingTableTop",
+      "bottom": "lit:blocks/ImprovedFurnaceBlock"
+    }
+  },
+  "variants": {
+    "variant":
+    {
+      "ruby": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock0",
+          "side": "gemulation:blocks/CraftingSideGemBlock0",
+          "bottom": "silentgems:blocks/GemBlock0"
+        }
+      },
+      "garnet": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock1",
+          "side": "gemulation:blocks/CraftingSideGemBlock1",
+          "bottom": "silentgems:blocks/GemBlock1"
+        }
+      },
+      "topaz": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock2",
+          "side": "gemulation:blocks/CraftingSideGemBlock2",
+          "bottom": "silentgems:blocks/GemBlock2"
+        }
+      },
+      "amber": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock3",
+          "side": "gemulation:blocks/CraftingSideGemBlock3",
+          "bottom": "silentgems:blocks/GemBlock3"
+        }
+      },
+      "heliodor": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock4",
+          "side": "gemulation:blocks/CraftingSideGemBlock4",
+          "bottom": "silentgems:blocks/GemBlock4"
+        }
+      },
+      "peridot": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock5",
+          "side": "gemulation:blocks/CraftingSideGemBlock5",
+          "bottom": "silentgems:blocks/GemBlock5"
+        }
+      },
+      "beryl": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock6",
+          "side": "gemulation:blocks/CraftingSideGemBlock6",
+          "bottom": "silentgems:blocks/GemBlock6"
+        }
+      },
+      "indicolite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock7",
+          "side": "gemulation:blocks/CraftingSideGemBlock7",
+          "bottom": "silentgems:blocks/GemBlock7"
+        }
+      },
+      "aquamarine": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock8",
+          "side": "gemulation:blocks/CraftingSideGemBlock8",
+          "bottom": "silentgems:blocks/GemBlock8"
+        }
+      },
+      "sapphire": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock9",
+          "side": "gemulation:blocks/CraftingSideGemBlock9",
+          "bottom": "silentgems:blocks/GemBlock9"
+        }
+      },
+      "iolite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock10",
+          "side": "gemulation:blocks/CraftingSideGemBlock10",
+          "bottom": "silentgems:blocks/GemBlock10"
+        }
+      },
+      "amethyst": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock11",
+          "side": "gemulation:blocks/CraftingSideGemBlock11",
+          "bottom": "silentgems:blocks/GemBlock11"
+        }
+      },
+      "agate": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock12",
+          "side": "gemulation:blocks/CraftingSideGemBlock12",
+          "bottom": "silentgems:blocks/GemBlock12"
+        }
+      },
+      "morganite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock13",
+          "side": "gemulation:blocks/CraftingSideGemBlock13",
+          "bottom": "silentgems:blocks/GemBlock13"
+        }
+      },
+      "onyx": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock14",
+          "side": "gemulation:blocks/CraftingSideGemBlock14",
+          "bottom": "silentgems:blocks/GemBlock14"
+        }
+      },
+      "opal": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlock15",
+          "side": "gemulation:blocks/CraftingSideGemBlock15",
+          "bottom": "silentgems:blocks/GemBlock15"
+        }
+      },
+      "carnelian": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark0",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark0",
+          "bottom": "silentgems:blocks/GemBlockDark0"
+        }
+      },
+      "spinel": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark1",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark1",
+          "bottom": "silentgems:blocks/GemBlockDark1"
+        }
+      },
+      "citrine": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark2",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark2",
+          "bottom": "silentgems:blocks/GemBlockDark2"
+        }
+      },
+      "jasper": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark3",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark3",
+          "bottom": "silentgems:blocks/GemBlockDark3"
+        }
+      },
+      "golden_beryl": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark4",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark4",
+          "bottom": "silentgems:blocks/GemBlockDark4"
+        }
+      },
+      "moldavite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark5",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark5",
+          "bottom": "silentgems:blocks/GemBlockDark5"
+        }
+      },
+      "malachite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark6",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark6",
+          "bottom": "silentgems:blocks/GemBlockDark6"
+        }
+      },
+      "turquoise": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark7",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark7",
+          "bottom": "silentgems:blocks/GemBlockDark7"
+        }
+      },
+      "moonstone": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark8",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark8",
+          "bottom": "silentgems:blocks/GemBlockDark8"
+        }
+      },
+      "blue_topaz": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark9",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark9",
+          "bottom": "silentgems:blocks/GemBlockDark9"
+        }
+      },
+      "tanzanite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark10",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark10",
+          "bottom": "silentgems:blocks/GemBlockDark10"
+        }
+      },
+      "violet_sapphire": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark11",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark11",
+          "bottom": "silentgems:blocks/GemBlockDark11"
+        }
+      },
+      "lepidolite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark12",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark12",
+          "bottom": "silentgems:blocks/GemBlockDark12"
+        }
+      },
+      "ametrine": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark13",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark13",
+          "bottom": "silentgems:blocks/GemBlockDark13"
+        }
+      },
+      "black_diamond": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark14",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark14",
+          "bottom": "silentgems:blocks/GemBlockDark14"
+        }
+      },
+      "alexandrite": {
+        "textures": {
+          "top": "gemulation:blocks/CraftingTopGemBlockDark15",
+          "side": "gemulation:blocks/CraftingSideGemBlockDark15",
+          "bottom": "silentgems:blocks/GemBlockDark15"
+        }
+      }
+    },
+    "normal": [{
+      "textures": {
+        "top": "gemulation:blocks/CraftingTopGemBlock0",
+        "side": "gemulation:blocks/CraftingSideGemBlock0",
+        "bottom": "silentgems:blocks/GemBlock0"
+      }
+    }],
+    "inventory": [{
+      "textures": {
+        "top": "gemulation:blocks/CraftingTopGemBlock0",
+        "side": "gemulation:blocks/CraftingSideGemBlock0",
+        "bottom": "silentgems:blocks/GemBlock0"
+      }
+    }]
+  }
+}

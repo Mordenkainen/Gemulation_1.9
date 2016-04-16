@@ -21,7 +21,7 @@ public class DarkSuperGemChestBlock extends DarkGemChestBlock{
     }
 
     @Override
-    protected void handleRegName() {
+    public void handleRegName() {
         this.setRegistryName(Gemulation.MODID,Names.DARK_SUPER_GEM_CHEST);
     }
 

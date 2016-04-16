@@ -44,7 +44,7 @@ public class GemFurnaceBlock extends ImprovedFurnaceBlock {
     }
 
     @Override
-    protected void handleRegName() {
+    public void handleRegName() {
         this.setRegistryName(Gemulation.MODID,Names.GEM_FURNACE);
     }
 

@@ -2,12 +2,8 @@ package com.m4thg33k.gemulation.blocks;
 
 import com.google.common.collect.Lists;
 import com.m4thg33k.gemulation.Gemulation;
-import com.m4thg33k.gemulation.core.util.StringHelper;
-import com.m4thg33k.gemulation.gui.GemulationGuiHandler;
 import com.m4thg33k.gemulation.lib.Names;
-import com.m4thg33k.lit.api.chest.ChestTypes;
-import com.m4thg33k.lit.blocks.ImprovedChestBlock;
-import com.m4thg33k.lit.tiles.TileImprovedChest;
+import com.m4thg33k.lit.blocks.ImprovedCraftingTableBlock;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -15,7 +11,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -27,47 +22,22 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-public class GemChestBlock extends ImprovedChestBlock {
+public class GemCraftingTableBlock extends ImprovedCraftingTableBlock {
 
     public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class, EnumSet.range(EnumGem.RUBY,EnumGem.OPAL));
 
-    public GemChestBlock()
+    public GemCraftingTableBlock()
     {
         super();
-
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY));
-        this.setUnlocalizedName(Names.GEM_CHEST);
+        this.setUnlocalizedName(Names.GEM_CRAFTING_TABLE);
         this.setCreativeTab(Gemulation.tabGemulation);
 
-//        handleRegName();
-        //this.setRegistryName(Gemulation.MODID,Names.GEM_CHEST);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT,EnumGem.RUBY));
     }
 
     @Override
-    public void handleRegName()
-    {
-        this.setRegistryName(Gemulation.MODID,Names.GEM_CHEST);
-    }
-
-    @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-        TileEntity te = worldIn.getTileEntity(pos);
-
-//        LogHelper.info("**Facing is: " + ((TileImprovedChest)te).getFacing());
-
-        if (worldIn.isRemote || worldIn.isSideSolid(pos.add(0,1,0),EnumFacing.DOWN))
-        {
-            return true;
-        }
-        playerIn.openGui(Gemulation.instance, GemulationGuiHandler.GEM_CHEST_GUI,worldIn,pos.getX(),pos.getY(),pos.getZ());
-        return true;
-    }
-
-    @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-//        String data = StringHelper.splitCamelCase(EnumGem.values()[meta].getGemName());
-//        LogHelper.info(data);
-        return new TileImprovedChest(ChestTypes.getTypeByName(StringHelper.splitCamelCase(EnumGem.values()[meta].getGemName())));
+    public void handleRegName() {
+        this.setRegistryName(Gemulation.MODID, Names.GEM_CRAFTING_TABLE);
     }
 
     @Override
@@ -88,7 +58,6 @@ public class GemChestBlock extends ImprovedChestBlock {
         return (state.getValue(VARIANT).ordinal());
     }
 
-
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this,VARIANT);
@@ -97,8 +66,7 @@ public class GemChestBlock extends ImprovedChestBlock {
     @Override
     public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
         ArrayList<ItemStack> items = Lists.newArrayList();
-        ItemStack stack = new ItemStack(this,1,getMetaFromState(state));
-        items.add(stack);
+        items.add(new ItemStack(this,1,getMetaFromState(state)));
         return items;
     }
 
@@ -107,4 +75,8 @@ public class GemChestBlock extends ImprovedChestBlock {
         return state.getValue(VARIANT).ordinal();
     }
 
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+        return super.onBlockActivated(worldIn, pos, state, playerIn, hand, heldItem, side, hitX, hitY, hitZ);
+    }
 }

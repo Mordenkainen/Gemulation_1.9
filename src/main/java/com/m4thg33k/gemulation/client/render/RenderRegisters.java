@@ -28,6 +28,8 @@ public class RenderRegisters {
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemFurnaceBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_FURNACE,"facing=north,on=false,variant="+type.name()));
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemChestBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CHEST,"variant="+type.name()));
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.superGemChestBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.SUPER_GEM_CHEST,"variant="+type.name()));
+
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemCraftingTableBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CRAFTING_TABLE,"variant="+type.name()));
             }
             else
             {
@@ -35,6 +37,8 @@ public class RenderRegisters {
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemFurnaceBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_FURNACE,"facing=north,on=false,variant="+type.name()));
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemChestBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CHEST,"variant="+type.name()));
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkSuperGemChestBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.DARK_SUPER_GEM_CHEST,"variant="+type.name()));
+
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemCraftingTableBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.DARK_GEM_CRAFTING_TABLE,"variant="+type.name()));
             }
 //            boolean isDark = type.ordinal()<16;
 //            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(isDark? ModBlocks.gemFurnaceBlock:ModBlocks.darkGemFurnaceBlock),isDark?type.ordinal()-16:type.ordinal(),new ModelResourceLocation(Gemulation.MODID+":"+ Names.GEM_FURNACE,"facing=north,isDark="+isDark+",on=false,variant="+ type.name()));

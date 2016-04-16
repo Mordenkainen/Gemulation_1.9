@@ -111,6 +111,39 @@ tile.DarkSuperGemChestBlock_13.name=Supercharged Ametrine Chest
 tile.DarkSuperGemChestBlock_14.name=Supercharged Black Diamond Chest
 tile.DarkSuperGemChestBlock_15.name=Supercharged Alexandrite Chest
 
+tile.GemCraftingTableBlock_0.name=Ruby Crafting Table
+tile.GemCraftingTableBlock_1.name=Garnet Crafting Table
+tile.GemCraftingTableBlock_2.name=Topaz Crafting Table
+tile.GemCraftingTableBlock_3.name=Amber Crafting Table
+tile.GemCraftingTableBlock_4.name=Heliodor Crafting Table
+tile.GemCraftingTableBlock_5.name=Peridot Crafting Table
+tile.GemCraftingTableBlock_6.name=Beryl Crafting Table
+tile.GemCraftingTableBlock_7.name=Indicolite Crafting Table
+tile.GemCraftingTableBlock_8.name=Aquamarine Crafting Table
+tile.GemCraftingTableBlock_9.name=Sapphire Crafting Table
+tile.GemCraftingTableBlock_10.name=Iolite Crafting Table
+tile.GemCraftingTableBlock_11.name=Amethyst Crafting Table
+tile.GemCraftingTableBlock_12.name=Agate Crafting Table
+tile.GemCraftingTableBlock_13.name=Morganite Crafting Table
+tile.GemCraftingTableBlock_14.name=Onyx Crafting Table
+tile.GemCraftingTableBlock_15.name=Opal Crafting Table
+tile.DarkGemCraftingTableBlock_0.name=Carnelian Crafting Table
+tile.DarkGemCraftingTableBlock_1.name=Spinel Crafting Table
+tile.DarkGemCraftingTableBlock_2.name=Citrine Crafting Table
+tile.DarkGemCraftingTableBlock_3.name=Jasper Crafting Table
+tile.DarkGemCraftingTableBlock_4.name=Golden Beryl Crafting Table
+tile.DarkGemCraftingTableBlock_5.name=Moldavite Crafting Table
+tile.DarkGemCraftingTableBlock_6.name=Malachite Crafting Table
+tile.DarkGemCraftingTableBlock_7.name=Turquoise Crafting Table
+tile.DarkGemCraftingTableBlock_8.name=Moonstone Crafting Table
+tile.DarkGemCraftingTableBlock_9.name=Blue Topaz Crafting Table
+tile.DarkGemCraftingTableBlock_10.name=Tanzanite Crafting Table
+tile.DarkGemCraftingTableBlock_11.name=Violet Sapphire Crafting Table
+tile.DarkGemCraftingTableBlock_12.name=Lepidolite Crafting Table
+tile.DarkGemCraftingTableBlock_13.name=Ametrine Crafting Table
+tile.DarkGemCraftingTableBlock_14.name=Black Diamond Crafting Table
+tile.DarkGemCraftingTableBlock_15.name=Alexandrite Crafting Table
+
 #-------------------------------------------------------------------
 # Items
 #-------------------------------------------------------------------

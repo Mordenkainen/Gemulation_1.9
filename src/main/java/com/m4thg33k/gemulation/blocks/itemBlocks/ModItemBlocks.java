@@ -13,6 +13,9 @@ public class ModItemBlocks {
     public static final SuperGemChestItemBlock superGemChestItemBlock = new SuperGemChestItemBlock(ModBlocks.superGemChestBlock);
     public static final DarkSuperGemChestItemBlock darkSuperGemChestItemBlock = new DarkSuperGemChestItemBlock(ModBlocks.darkSuperGemChestBlock);
 
+    public static final GemCraftingTableItemBlock gemCraftingTableItemBlock = new GemCraftingTableItemBlock(ModBlocks.gemCraftingTableBlock);
+    public static final DarkGemCraftingTableItemBlock darkGemCraftingTableItemBlock = new DarkGemCraftingTableItemBlock(ModBlocks.darkGemCraftingTableBlock);
+
 
     public static void create()
     {
@@ -23,5 +26,8 @@ public class ModItemBlocks {
         GameRegistry.register(darkGemChestItemBlock);
         GameRegistry.register(superGemChestItemBlock);
         GameRegistry.register(darkSuperGemChestItemBlock);
+
+        GameRegistry.register(gemCraftingTableItemBlock);
+        GameRegistry.register(darkGemCraftingTableItemBlock);
     }
 }

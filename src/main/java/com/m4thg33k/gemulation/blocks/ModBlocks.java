@@ -18,25 +18,24 @@ public class ModBlocks {
 
     public static GemChangerBlock gemChangerBlock = new GemChangerBlock();
 
+    public static GemCraftingTableBlock gemCraftingTableBlock = new GemCraftingTableBlock();
+    public static DarkGemCraftingTableBlock darkGemCraftingTableBlock = new DarkGemCraftingTableBlock();
+
 
     public static void createBlocks()
     {
         GameRegistry.register(gemFurnaceBlock);
-//        GameRegistry.registerBlock(gemFurnaceBlock, GemFurnaceItemBlock.class, Names.GEM_FURNACE);
         GameRegistry.register(darkGemFurnaceBlock);
-//        GameRegistry.registerBlock(darkGemFurnaceBlock,GemFurnaceItemBlock.class, Names.DARK_GEM_FURNACE);
         GameRegistry.register(gemChestBlock);
         GameRegistry.register(darkGemChestBlock);
         GameRegistry.register(superGemChestBlock);
         GameRegistry.register(darkSuperGemChestBlock);
-//        GameRegistry.registerBlock(gemChestBlock, GemChestItemBlock.class,Names.GEM_CHEST);
-//        GameRegistry.registerBlock(darkGemChestBlock, GemChestItemBlock.class,Names.DARK_GEM_CHEST);
-//        GameRegistry.registerBlock(superGemChestBlock,GemChestItemBlock.class,Names.SUPER_GEM_CHEST);
-//        GameRegistry.registerBlock(darkSuperGemChestBlock,GemChestItemBlock.class,Names.DARK_SUPER_GEM_CHEST);
 
         GameRegistry.register(gemChangerBlock);
         GameRegistry.register(new ItemBlock(gemChangerBlock).setRegistryName(Gemulation.MODID,Names.GEM_CHANGER));
-//        GameRegistry.registerBlock(gemChangerBlock,Names.GEM_CHANGER);
+
+        GameRegistry.register(gemCraftingTableBlock);
+        GameRegistry.register(darkGemCraftingTableBlock);
 
     }
 }

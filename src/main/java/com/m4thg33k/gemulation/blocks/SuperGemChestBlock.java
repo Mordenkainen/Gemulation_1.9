@@ -21,7 +21,7 @@ public class SuperGemChestBlock extends GemChestBlock {
     }
 
     @Override
-    protected void handleRegName() {
+    public void handleRegName() {
         this.setRegistryName(Gemulation.MODID,Names.SUPER_GEM_CHEST);
     }
 
