@@ -14,4 +14,6 @@ public class Names {
 
     public static final String GEM_CRAFTING_TABLE = "GemCraftingTableBlock";
     public static final String DARK_GEM_CRAFTING_TABLE = "DarkGemCraftingTableBlock";
+
+    public static final String GEM_BAG = "GemBagItem";
 }

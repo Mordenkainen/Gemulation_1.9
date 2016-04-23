@@ -25,6 +25,11 @@ public class SlotGem extends SlotVariableInput{
         return this.allowInsertion && (stack.getItem() == ModItems.gem && stack.getItemDamage()==gemData);
     }
 
+    public int getGemData()
+    {
+        return gemData;
+    }
+
 //    @Override
 //    public ResourceLocation getBackgroundLocation() {
 //        return new ResourceLocation("silentgems:/textures/items/Gem"+gemData);

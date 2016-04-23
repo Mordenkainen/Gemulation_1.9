@@ -1,0 +1,331 @@
+{
+  "forge_marker": 1,
+  "defaults":
+  {
+    "model": "gemulation:GemBagItem",
+    "transform": "forge:default-item"
+  },
+  "variants":
+  {
+    "open=true,variant=ruby": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen0"
+      }
+    }],
+    "open=true,variant=garnet": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen1"
+      }
+    }],
+    "open=true,variant=topaz": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen2"
+      }
+    }],
+    "open=true,variant=amber": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen3"
+      }
+    }],
+    "open=true,variant=heliodor": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen4"
+      }
+    }],
+    "open=true,variant=peridot": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen5"
+      }
+    }],
+    "open=true,variant=beryl": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen6"
+      }
+    }],
+    "open=true,variant=indicolite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen7"
+      }
+    }],
+    "open=true,variant=aquamarine": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen8"
+      }
+    }],
+    "open=true,variant=sapphire": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen9"
+      }
+    }],
+    "open=true,variant=iolite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen10"
+      }
+    }],
+    "open=true,variant=amethyst": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen11"
+      }
+    }],
+    "open=true,variant=agate": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen12"
+      }
+    }],
+    "open=true,variant=morganite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen13"
+      }
+    }],
+    "open=true,variant=onyx": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen14"
+      }
+    }],
+    "open=true,variant=opal": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpen15"
+      }
+    }],
+    "open=true,variant=carnelian": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark0"
+      }
+    }],
+    "open=true,variant=spinel": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark1"
+      }
+    }],
+    "open=true,variant=citrine": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark2"
+      }
+    }],
+    "open=true,variant=jasper": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark3"
+      }
+    }],
+    "open=true,variant=golden_beryl": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark4"
+      }
+    }],
+    "open=true,variant=moldavite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark5"
+      }
+    }],
+    "open=true,variant=malachite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark6"
+      }
+    }],
+    "open=true,variant=turquoise": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark7"
+      }
+    }],
+    "open=true,variant=moonstone": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark8"
+      }
+    }],
+    "open=true,variant=blue_topaz": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark9"
+      }
+    }],
+    "open=true,variant=tanzanite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark10"
+      }
+    }],
+    "open=true,variant=violet_sapphire": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark11"
+      }
+    }],
+    "open=true,variant=lepidolite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark12"
+      }
+    }],
+    "open=true,variant=ametrine": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark13"
+      }
+    }],
+    "open=true,variant=black_diamond": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark14"
+      }
+    }],
+    "open=true,variant=alexandrite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagOpenDark15"
+      }
+    }],
+    "open=false,variant=ruby": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed0"
+      }
+    }],
+    "open=false,variant=garnet": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed1"
+      }
+    }],
+    "open=false,variant=topaz": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed2"
+      }
+    }],
+    "open=false,variant=amber": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed3"
+      }
+    }],
+    "open=false,variant=heliodor": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed4"
+      }
+    }],
+    "open=false,variant=peridot": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed5"
+      }
+    }],
+    "open=false,variant=beryl": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed6"
+      }
+    }],
+    "open=false,variant=indicolite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed7"
+      }
+    }],
+    "open=false,variant=aquamarine": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed8"
+      }
+    }],
+    "open=false,variant=sapphire": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed9"
+      }
+    }],
+    "open=false,variant=iolite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed10"
+      }
+    }],
+    "open=false,variant=amethyst": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed11"
+      }
+    }],
+    "open=false,variant=agate": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed12"
+      }
+    }],
+    "open=false,variant=morganite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed13"
+      }
+    }],
+    "open=false,variant=onyx": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed14"
+      }
+    }],
+    "open=false,variant=opal": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosed15"
+      }
+    }],
+    "open=false,variant=carnelian": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark0"
+      }
+    }],
+    "open=false,variant=spinel": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark1"
+      }
+    }],
+    "open=false,variant=citrine": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark2"
+      }
+    }],
+    "open=false,variant=jasper": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark3"
+      }
+    }],
+    "open=false,variant=golden_beryl": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark4"
+      }
+    }],
+    "open=false,variant=moldavite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark5"
+      }
+    }],
+    "open=false,variant=malachite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark6"
+      }
+    }],
+    "open=false,variant=turquoise": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark7"
+      }
+    }],
+    "open=false,variant=moonstone": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark8"
+      }
+    }],
+    "open=false,variant=blue_topaz": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark9"
+      }
+    }],
+    "open=false,variant=tanzanite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark10"
+      }
+    }],
+    "open=false,variant=violet_sapphire": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark11"
+      }
+    }],
+    "open=false,variant=lepidolite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark12"
+      }
+    }],
+    "open=false,variant=ametrine": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark13"
+      }
+    }],
+    "open=false,variant=black_diamond": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark14"
+      }
+    }],
+    "open=false,variant=alexandrite": [{
+      "textures": {
+        "layer0":"gemulation:items/GemBagClosedDark15"
+      }
+    }]
+  }
+}
