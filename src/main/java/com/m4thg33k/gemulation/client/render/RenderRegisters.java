@@ -3,6 +3,7 @@ package com.m4thg33k.gemulation.client.render;
 import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.blocks.ModBlocks;
 import com.m4thg33k.gemulation.core.util.LogHelper;
+import com.m4thg33k.gemulation.items.ModItems;
 import com.m4thg33k.gemulation.lib.Names;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -30,6 +31,7 @@ public class RenderRegisters {
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.superGemChestBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.SUPER_GEM_CHEST,"variant="+type.name()));
 
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemCraftingTableBlock),ord,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CRAFTING_TABLE,"variant="+type.name()));
+
             }
             else
             {
@@ -40,10 +42,16 @@ public class RenderRegisters {
 
                 ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.darkGemCraftingTableBlock),ord-16,new ModelResourceLocation(Gemulation.MODID+":"+Names.DARK_GEM_CRAFTING_TABLE,"variant="+type.name()));
             }
+
+
+            ModelLoader.setCustomModelResourceLocation(ModItems.itemGemBag,type.ordinal(),new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_BAG,"open=false,"+"variant="+type.getName()));
+            ModelLoader.setCustomModelResourceLocation(ModItems.itemGemBag,type.ordinal()+32,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_BAG,"open=true,"+"variant="+type.getName()));
 //            boolean isDark = type.ordinal()<16;
 //            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(isDark? ModBlocks.gemFurnaceBlock:ModBlocks.darkGemFurnaceBlock),isDark?type.ordinal()-16:type.ordinal(),new ModelResourceLocation(Gemulation.MODID+":"+ Names.GEM_FURNACE,"facing=north,isDark="+isDark+",on=false,variant="+ type.name()));
         }
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.gemChangerBlock),0,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_CHANGER,"inventory"));
+
+//        ModelLoader.setCustomModelResourceLocation(ModItems.itemGemBag,0,new ModelResourceLocation(Gemulation.MODID+":"+Names.GEM_BAG,"inventory"));
     }
 }

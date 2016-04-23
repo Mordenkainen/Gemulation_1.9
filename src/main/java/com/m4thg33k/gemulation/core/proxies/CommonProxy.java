@@ -6,6 +6,7 @@ import com.m4thg33k.gemulation.blocks.itemBlocks.ModItemBlocks;
 import com.m4thg33k.gemulation.core.init.MiscInits;
 import com.m4thg33k.gemulation.core.init.ModRecipes;
 import com.m4thg33k.gemulation.gui.GemulationGuiHandler;
+import com.m4thg33k.gemulation.items.ModItems;
 import com.m4thg33k.gemulation.tiles.ModTiles;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -20,6 +21,7 @@ public class CommonProxy {
 //        ModItems.createItems();
         ModBlocks.createBlocks();
         ModItemBlocks.create();
+        ModItems.createItems();
         MiscInits.addFurnaceTypes();
         MiscInits.addChestTypes();
     }
