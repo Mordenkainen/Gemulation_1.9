@@ -35,11 +35,11 @@ public class MiscInits {
         //standard
         for (EnumGem type : EnumSet.range(EnumGem.RUBY, EnumGem.OPAL))
         {
-            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),184,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChest" + type.ordinal() + ".png"),type.getItemOreName(),new ItemStack(ModBlocks.gemChestBlock,1,type.ordinal()),false,false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedChestBlock),new ItemStack(ModBlocks.gemChestBlock,1, OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1, OreDictionary.WILDCARD_VALUE));
+            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),184,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChest" + type.ordinal() + ".png"),type.getItemOreName(),new ItemStack(ModBlocks.gemChestBlock,1,type.ordinal()),true,false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedChestBlock),new ItemStack(ModBlocks.gemChestBlock,1, OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1, OreDictionary.WILDCARD_VALUE));
         }
         for (EnumGem type : EnumSet.range(EnumGem.CARNELIAN,EnumGem.ALEXANDRITE))
         {
-            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),187,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChestDark" + (type.ordinal()-16) + ".png"),type.getItemOreName(),new ItemStack(ModBlocks.darkGemChestBlock,1,type.ordinal()-16),false,false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedChestBlock),new ItemStack(ModBlocks.gemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1, OreDictionary.WILDCARD_VALUE));
+            ChestTypes.addType(StringHelper.splitCamelCase(type.getGemName()),54,false,new ResourceLocation(Gemulation.MODID,"textures/gui/BasicGemChest.png"),187,202,6,9,new ResourceLocation(Gemulation.MODID,"textures/model/GemChestDark" + (type.ordinal()-16) + ".png"),type.getItemOreName(),new ItemStack(ModBlocks.darkGemChestBlock,1,type.ordinal()-16),true,false,new ItemStack(com.m4thg33k.lit.blocks.ModBlocks.improvedChestBlock),new ItemStack(ModBlocks.gemChestBlock,1,OreDictionary.WILDCARD_VALUE),new ItemStack(ModBlocks.darkGemChestBlock,1, OreDictionary.WILDCARD_VALUE));
         }
 
         //supercharged
