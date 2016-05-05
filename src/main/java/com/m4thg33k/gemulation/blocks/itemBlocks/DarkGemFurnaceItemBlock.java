@@ -42,7 +42,7 @@ public class DarkGemFurnaceItemBlock extends ItemBlock{
 
         if (shifted)
         {
-            EnumGem type = EnumGem.values()[stack.getItemDamage()];
+            EnumGem type = EnumGem.values()[stack.getItemDamage()+16];
 
             list.add(TextFormatting.ITALIC + "Properties");
             list.add("----------------");

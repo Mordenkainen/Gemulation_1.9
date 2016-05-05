@@ -37,8 +37,8 @@ import java.util.List;
 
 public class ItemGemBag extends Item {
 
-    private static final String TAG_ITEMS = "InvItems";
-    private static final String TAG_SLOT = "Slot";
+    public static final String TAG_ITEMS = "InvItems";
+    public static final String TAG_SLOT = "Slot";
 
     public ItemGemBag()
     {

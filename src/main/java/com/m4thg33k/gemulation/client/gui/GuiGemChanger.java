@@ -11,6 +11,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.silentchaos512.gems.item.ModItems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GuiGemChanger extends GuiContainer {
 
     private TileGemChanger tileGemChanger;
@@ -51,16 +54,23 @@ public class GuiGemChanger extends GuiContainer {
         double perc = ((int)(10000*((((double)stored)/TileGemChanger.MAX_ENERGY))))/100.0;
 //        double perc = (((int)(((double)stored/(double)tileGemChanger.getMaxEnergyStored())*10000))%100)/100.0;
         int num = stored/TileGemChanger.ENERGY_NEEDED_TO_CHANGE;
-        String text = "Can convert";
-        String text2 = num+" gems.";
+        //String text = "Can convert";
+//        String text2 = num+" gems.";
 
-        GlStateManager.color(1.0f,1.0f,1.0f,1.0f);
-        mc.getTextureManager().bindTexture(new ResourceLocation(Gemulation.MODID+":textures/gui/"+ Names.GEM_CHANGER + ".png"));
-//        this.drawTexturedModalRect(mouseX-w-2,mouseY-h-16,0,202,this.fontRendererObj.getStringWidth(text)+4,20);
+        List<String> text = new ArrayList<String>();
+        text.add(perc+"%");
+        text.add("Can convert");
+        text.add(num+" gems.");
 
-        this.fontRendererObj.drawString(perc+"%",mX,mY-14,0x404040,false);
-        this.fontRendererObj.drawString(text,mX,mY-6,0x404040,false);
-        this.fontRendererObj.drawString(text2,mX+this.fontRendererObj.getStringWidth("  "),mY+2,0x404040,false);
+        this.drawHoveringText(text,mX,mY);
+
+//        GlStateManager.color(1.0f,1.0f,1.0f,1.0f);
+//        mc.getTextureManager().bindTexture(new ResourceLocation(Gemulation.MODID+":textures/gui/"+ Names.GEM_CHANGER + ".png"));
+////        this.drawTexturedModalRect(mouseX-w-2,mouseY-h-16,0,202,this.fontRendererObj.getStringWidth(text)+4,20);
+//
+//        this.fontRendererObj.drawString(perc+"%",mX,mY-14,0x404040,false);
+//        this.fontRendererObj.drawString(text,mX,mY-6,0x404040,false);
+//        this.fontRendererObj.drawString(text2,mX+this.fontRendererObj.getStringWidth("  "),mY+2,0x404040,false);
 
 //        mc.getTextureManager().bindTexture(new ResourceLocation(Gemulation.MODID+":textures/gui/"+ Names.GEM_CHANGER + "Foreground.png"));
 //        this.drawTexturedModalRect(0,0,0,0,xSize,ySize);

@@ -1,6 +1,7 @@
 package com.m4thg33k.gemulation.core.init;
 
 import com.m4thg33k.gemulation.blocks.ModBlocks;
+import com.m4thg33k.gemulation.core.recipes.BagRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -39,16 +40,17 @@ public class ModRecipes {
         }
 
         //gem bags
+        GameRegistry.addRecipe(new BagRecipe());
         for (int i=0;i<16;i++)
         {
             //light bags
             GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(Blocks.wool,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
             GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
-            GameRegistry.addShapelessRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
+//            GameRegistry.addShapelessRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
             //dark bags
             GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),"wgw","wnw"," w ",'w',new ItemStack(Blocks.wool,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),'n',new ItemStack(Blocks.netherrack,1));
             GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),"wgw","wnw"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),'n',new ItemStack(Blocks.netherrack,1));
-            GameRegistry.addShapelessRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),new ItemStack(Blocks.netherrack,1));
+//            GameRegistry.addShapelessRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),new ItemStack(Blocks.netherrack,1));
         }
 
     }
