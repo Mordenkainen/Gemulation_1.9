@@ -95,14 +95,6 @@ public class GemChestBlock extends ImprovedChestBlock {
     }
 
     @Override
-    public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-        ArrayList<ItemStack> items = Lists.newArrayList();
-//        ItemStack stack = new ItemStack(this,1,getMetaFromState(state));
-//        items.add(stack);
-        return items;
-    }
-
-    @Override
     public int damageDropped(IBlockState state) {
         return state.getValue(VARIANT).ordinal();
     }

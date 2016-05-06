@@ -90,14 +90,7 @@ public class DarkGemChestBlock extends ImprovedChestBlock{
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this,VARIANT);
     }
-
-    @Override
-    public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-        ArrayList<ItemStack> items = Lists.newArrayList();
-//        ItemStack stack = new ItemStack(this,1,getMetaFromState(state));
-//        items.add(stack);
-        return items;
-    }
+    
 
     @Override
     public int damageDropped(IBlockState state) {
