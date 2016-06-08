@@ -4,7 +4,7 @@ import com.m4thg33k.gemulation.tiles.TileGemChanger;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ICrafting;
+import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
@@ -132,9 +132,9 @@ public class ContainerGemChanger extends Container {
     public void detectAndSendChanges() {
         super.detectAndSendChanges();
 
-        for (int i=0;i<this.crafters.size();i++)
+        for (int i=0;i<this.listeners.size();i++)
         {
-            ICrafting iCrafting = this.crafters.get(i);
+            IContainerListener iCrafting = this.listeners.get(i);
 
             if (this.workValue != this.te.workTime)
             {
@@ -153,8 +153,8 @@ public class ContainerGemChanger extends Container {
     }
 
     @Override
-    public void onCraftGuiOpened(ICrafting iCrafting) {
-        super.onCraftGuiOpened(iCrafting);
+    public void addListener(IContainerListener iCrafting) {
+        super.addListener(iCrafting);
 
         iCrafting.sendProgressBarUpdate(this,0,workValue);
         iCrafting.sendProgressBarUpdate(this,1,this.te.getCharge()%1000);

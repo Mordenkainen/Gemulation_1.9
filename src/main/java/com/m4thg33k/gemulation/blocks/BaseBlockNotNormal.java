@@ -16,7 +16,7 @@ public class BaseBlockNotNormal extends BaseBlock{
 
     public BaseBlockNotNormal(String unlocalizedName, float hardness, float resistance)
     {
-        super(unlocalizedName,Material.rock,hardness,resistance);
+        super(unlocalizedName,Material.ROCK,hardness,resistance);
     }
 
     public BaseBlockNotNormal(String unlocalizedName)

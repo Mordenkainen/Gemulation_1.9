@@ -21,7 +21,7 @@ public class GemChangerBlock extends BaseBlockNotNormal {
 
     public GemChangerBlock()
     {
-        super(Names.GEM_CHANGER, Material.iron,5.0f,10.0f);
+        super(Names.GEM_CHANGER, Material.IRON,5.0f,10.0f);
 
     }
 

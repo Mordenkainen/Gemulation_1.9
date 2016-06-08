@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.lib.Names;
 import com.m4thg33k.lit.blocks.ImprovedCraftingTableBlock;
+import com.m4thg33k.lit.blocks.ImprovedWorktableBlock;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-public class DarkGemCraftingTableBlock extends ImprovedCraftingTableBlock {
+public class DarkGemCraftingTableBlock extends ImprovedWorktableBlock {
 
     public static final PropertyEnum<EnumGem> VARIANT = PropertyEnum.create("variant",EnumGem.class, EnumSet.range(EnumGem.CARNELIAN,EnumGem.ALEXANDRITE));
 

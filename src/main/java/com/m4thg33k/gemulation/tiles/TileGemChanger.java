@@ -113,7 +113,7 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
     }
 
     @Override
-    public void writeToNBT(NBTTagCompound compound) {
+    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
 
         NBTTagList list = new NBTTagList();
@@ -145,6 +145,8 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
         }
         compound.setTag("TargetStack",targetStack);
         compound.setInteger("NumChanges",numChanges);
+
+        return compound;
     }
 
     @Override

@@ -25,7 +25,7 @@ public class BaseBlock extends Block {
 
     public BaseBlock(String unlocalizedName, float hardness, float resistance)
     {
-        this(unlocalizedName,Material.rock,hardness,resistance);
+        this(unlocalizedName,Material.ROCK,hardness,resistance);
     }
 
     public BaseBlock(String unlocalizedName)
