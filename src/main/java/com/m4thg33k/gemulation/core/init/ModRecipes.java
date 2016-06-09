@@ -1,5 +1,6 @@
 package com.m4thg33k.gemulation.core.init;
 
+import com.m4thg33k.gemulation.Gemulation;
 import com.m4thg33k.gemulation.blocks.ModBlocks;
 import com.m4thg33k.gemulation.core.recipes.BagRecipe;
 import net.minecraft.init.Blocks;
@@ -7,6 +8,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.RecipeSorter;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import net.silentchaos512.gems.item.ModItems;
@@ -16,6 +18,8 @@ public class ModRecipes {
 
     public static void createRecipes()
     {
+        RecipeSorter.register(Gemulation.MODID + ":" + "BagRecipe", BagRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapelessore");
+
         GameRegistry.addRecipe(new ItemStack(ModBlocks.gemChangerBlock,1,0),"www","coc","ooo",'w',new ItemStack(Blocks.WOOL,1, OreDictionary.WILDCARD_VALUE),'o',new ItemStack(Blocks.OBSIDIAN,1),'c',new ItemStack(ModItems.chaosOrb,1,1));
 
         //furnace upgrades
