@@ -3,6 +3,7 @@ package com.m4thg33k.gemulation.inventory;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.silentchaos512.gems.api.lib.EnumMaterialGrade;
 import net.silentchaos512.gems.item.ModItems;
 
 public class SlotGem extends SlotVariableInput{
@@ -22,7 +23,7 @@ public class SlotGem extends SlotVariableInput{
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        return this.allowInsertion && (stack.getItem() == ModItems.gem && stack.getItemDamage()==gemData);
+        return this.allowInsertion && (stack.getItem() == ModItems.gem && stack.getItemDamage()==gemData && EnumMaterialGrade.fromStack(stack) == EnumMaterialGrade.NONE);
     }
 
     public int getGemData()

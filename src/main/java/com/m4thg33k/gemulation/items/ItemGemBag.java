@@ -29,6 +29,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.wrapper.InvWrapper;
+import net.silentchaos512.gems.api.lib.EnumMaterialGrade;
 import net.silentchaos512.gems.item.ModItems;
 import net.silentchaos512.gems.lib.EnumGem;
 import org.lwjgl.input.Keyboard;
@@ -172,7 +173,7 @@ public class ItemGemBag extends Item {
             }
 
             ItemStack inventory = player.inventory.getStackInSlot(i);
-            if (inventory!=null && inventory.getItem()== ModItems.gem && inventory.stackSize>0 && inventory.getItemDamage()<32)
+            if (inventory!=null && inventory.getItem()== ModItems.gem && inventory.stackSize>0 && inventory.getItemDamage()<32 && EnumMaterialGrade.fromStack(inventory) == EnumMaterialGrade.NONE)
             {
                 int variant = inventory.getItemDamage();
                 ItemStack stackAt = bagInventory[variant];
@@ -212,7 +213,7 @@ public class ItemGemBag extends Item {
     public void onPickupItem(EntityItemPickupEvent event)
     {
         ItemStack stack = event.getItem().getEntityItem();
-        if (stack.getItem() == ModItems.gem && stack.stackSize >0)
+        if (stack.getItem() == ModItems.gem && stack.stackSize >0 && EnumMaterialGrade.fromStack(stack) == EnumMaterialGrade.NONE)
         {
             int variant = stack.getItemDamage();
             if (variant>=32)
