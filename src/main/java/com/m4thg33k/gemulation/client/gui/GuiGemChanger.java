@@ -39,11 +39,11 @@ public class GuiGemChanger extends GuiContainer {
         int mY = mouseY - h;
 
         String name = tileGemChanger.getDisplayName().getUnformattedText();
-        this.fontRendererObj.drawString(name,xSize/2-this.fontRendererObj.getStringWidth(name)/2,6,0x404040);
-        this.fontRendererObj.drawString(this.playerInventory.getDisplayName().getUnformattedText(),83,ySize-96+2,0x404040);
+        this.fontRenderer.drawString(name,xSize/2-this.fontRenderer.getStringWidth(name)/2,6,0x404040);
+        this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedText(),83,ySize-96+2,0x404040);
 
 //        String energy = ((ContainerGemChanger)inventorySlots).storedEnergy + " / " + tileGemChanger.getMaxEnergyStored();
-//        this.fontRendererObj.drawString(energy,xSize/2-this.fontRendererObj.getStringWidth(energy)/2,65,0x404040);
+//        this.fontRenderer.drawString(energy,xSize/2-this.fontRenderer.getStringWidth(energy)/2,65,0x404040);
 
         if (mX<176 || mX>=179 || mY<26 || mY >=60)
         {
@@ -66,11 +66,11 @@ public class GuiGemChanger extends GuiContainer {
 
 //        GlStateManager.color(1.0f,1.0f,1.0f,1.0f);
 //        mc.getTextureManager().bindTexture(new ResourceLocation(Gemulation.MODID+":textures/gui/"+ Names.GEM_CHANGER + ".png"));
-////        this.drawTexturedModalRect(mouseX-w-2,mouseY-h-16,0,202,this.fontRendererObj.getStringWidth(text)+4,20);
+////        this.drawTexturedModalRect(mouseX-w-2,mouseY-h-16,0,202,this.fontRenderer.getStringWidth(text)+4,20);
 //
-//        this.fontRendererObj.drawString(perc+"%",mX,mY-14,0x404040,false);
-//        this.fontRendererObj.drawString(text,mX,mY-6,0x404040,false);
-//        this.fontRendererObj.drawString(text2,mX+this.fontRendererObj.getStringWidth("  "),mY+2,0x404040,false);
+//        this.fontRenderer.drawString(perc+"%",mX,mY-14,0x404040,false);
+//        this.fontRenderer.drawString(text,mX,mY-6,0x404040,false);
+//        this.fontRenderer.drawString(text2,mX+this.fontRenderer.getStringWidth("  "),mY+2,0x404040,false);
 
 //        mc.getTextureManager().bindTexture(new ResourceLocation(Gemulation.MODID+":textures/gui/"+ Names.GEM_CHANGER + "Foreground.png"));
 //        this.drawTexturedModalRect(0,0,0,0,xSize,ySize);

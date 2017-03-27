@@ -76,7 +76,7 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
         if (!simulate)
         {
             energyStored += amountReceived;
-            this.worldObj.markAndNotifyBlock(pos,null,worldObj.getBlockState(pos),worldObj.getBlockState(pos),1);
+            this.world.markAndNotifyBlock(pos,null,world.getBlockState(pos),world.getBlockState(pos),1);
             //LogHelper.info("I received " + amountReceived + " energy and now have: " + energyStored);
         }
 
@@ -103,7 +103,7 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
         {
             NBTTagCompound stackTag = list.getCompoundTagAt(i);
             int slot = stackTag.getInteger("Slot");
-            setInventorySlotContents(slot,ItemStack.loadItemStackFromNBT(stackTag));
+            setInventorySlotContents(slot,ItemStack.func_77949_a(stackTag));
         }
 
         customName = compound.getString("CustomName");
@@ -112,7 +112,7 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
 
         workTime = compound.getInteger("WorkTime");
         energyStored = compound.getInteger("EnergyStored");
-        target = ItemStack.loadItemStackFromNBT(compound.getCompoundTag("TargetStack"));
+        target = ItemStack.func_77949_a(compound.getCompoundTag("TargetStack"));
         numChanges = compound.getInteger("NumChanges");
     }
 
@@ -253,8 +253,8 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
     }
 
     @Override
-    public boolean isUseableByPlayer(EntityPlayer player) {
-        return worldObj.getTileEntity(pos) == this && player.getDistanceSq(pos.add(0.5,0.5,0.5))<=64;
+    public boolean isUsableByPlayer(EntityPlayer player) {
+        return world.getTileEntity(pos) == this && player.getDistanceSq(pos.add(0.5,0.5,0.5))<=64;
     }
 
     @Override
@@ -319,7 +319,7 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
 
         increaseTimer();
 
-        if (!worldObj.isRemote)
+        if (!world.isRemote)
         {
 
             isDirty = moveToWork();
@@ -519,7 +519,7 @@ public class TileGemChanger extends TileEntity implements ISidedInventory, ITick
             return;
         }
 
-        int newType = worldObj.rand.nextInt(15);
+        int newType = world.rand.nextInt(15);
         if (getTarget()!=null && numChanges>=MAX_CHANGES)
         {
             newType = getTarget().getItemDamage();

@@ -18,6 +18,8 @@ public class ModRecipes {
 
     public static void createRecipes()
     {
+        registerOreDictionary();
+
         RecipeSorter.register(Gemulation.MODID + ":" + "BagRecipe", BagRecipe.class, RecipeSorter.Category.SHAPELESS, "after:forge:shapelessore");
 
         GameRegistry.addRecipe(new ItemStack(ModBlocks.gemChangerBlock,1,0),"www","coc","ooo",'w',new ItemStack(Blocks.WOOL,1, OreDictionary.WILDCARD_VALUE),'o',new ItemStack(Blocks.OBSIDIAN,1),'c',new ItemStack(ModItems.chaosOrb,1,1));
@@ -65,5 +67,15 @@ public class ModRecipes {
 //            GameRegistry.addShapelessRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),new ItemStack(Blocks.netherrack,1));
         }
 
+    }
+
+    private static void registerOreDictionary()
+    {
+        OreDictionary.registerOre("workbench", ModBlocks.gemCraftingTableBlock);
+        OreDictionary.registerOre("workbench", ModBlocks.darkGemCraftingTableBlock);
+        OreDictionary.registerOre("furnace", ModBlocks.gemFurnaceBlock);
+        OreDictionary.registerOre("furnace", ModBlocks.darkGemFurnaceBlock);
+        OreDictionary.registerOre("chest", ModBlocks.darkGemChestBlock);
+        OreDictionary.registerOre("chest", ModBlocks.gemChestBlock);
     }
 }

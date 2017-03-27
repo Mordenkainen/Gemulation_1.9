@@ -23,10 +23,6 @@ public class SlotVariableInput extends Slot {
         return allowInsertion;
     }
 
-    @Override
-    public void onPickupFromSlot(EntityPlayer playerIn, ItemStack stack) {
-        super.onPickupFromSlot(playerIn, stack);
-    }
 
     @Override
     public boolean canTakeStack(EntityPlayer playerIn) {

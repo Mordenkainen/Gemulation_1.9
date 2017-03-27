@@ -79,7 +79,7 @@ public class ItemGemBag extends Item {
             byte slot = stackTag.getByte(TAG_SLOT);
             if (slot>=0 && slot<inventorySlots.length)
             {
-                inventorySlots[slot] = ItemStack.loadItemStackFromNBT(stackTag);
+                inventorySlots[slot] = ItemStack.func_77949_a(stackTag);
             }
         }
 
@@ -212,6 +212,10 @@ public class ItemGemBag extends Item {
     @SubscribeEvent
     public void onPickupItem(EntityItemPickupEvent event)
     {
+        if (event.isCanceled())
+        {
+            return;
+        }
         ItemStack stack = event.getItem().getEntityItem();
         if (stack.getItem() == ModItems.gem && stack.stackSize >0 && EnumMaterialGrade.fromStack(stack) == EnumMaterialGrade.NONE)
         {

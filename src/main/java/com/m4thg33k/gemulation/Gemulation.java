@@ -4,6 +4,7 @@ import com.m4thg33k.gemulation.blocks.ModBlocks;
 import com.m4thg33k.gemulation.core.proxies.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -11,7 +12,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Gemulation.MODID,name = Gemulation.MODNAME, version = Gemulation.VERSION, dependencies = "required-after:SilentGems;required-after:lit")
+@Mod(modid = Gemulation.MODID,name = Gemulation.MODNAME, version = Gemulation.VERSION, dependencies = "required-after:silentgems;required-after:lit")
 public class Gemulation {
 
     public static final String MODID = "gemulation";
@@ -45,7 +46,8 @@ public class Gemulation {
     public static CreativeTabs tabGemulation = new CreativeTabs("tabGemulation") {
         @Override
         public Item getTabIconItem() {
-            return Item.getItemFromBlock(ModBlocks.gemFurnaceBlock);
+            return Items.BEETROOT_SOUP;
+//            return Item.getItemFromBlock(ModBlocks.gemFurnaceBlock);
         }
     };
 }

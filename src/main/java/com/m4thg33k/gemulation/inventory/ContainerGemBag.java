@@ -60,7 +60,7 @@ public class ContainerGemBag extends Container{
 
     @Override
     public boolean canInteractWith(EntityPlayer playerIn) {
-        boolean can = gemBag.isUseableByPlayer(playerIn);
+        boolean can = gemBag.isUsableByPlayer(playerIn);
         if (!can)
         {
             onContainerClosed(playerIn);
@@ -107,7 +107,7 @@ public class ContainerGemBag extends Container{
             {
                 return null;
             }
-            slot.onPickupFromSlot(playerIn,current);
+            slot.func_82870_a(playerIn,current);
         }
         return previous;
     }
