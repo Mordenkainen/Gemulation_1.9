@@ -3,7 +3,7 @@ package com.m4thg33k.gemulation.inventory;
 import com.m4thg33k.gemulation.tiles.TileGemChanger;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.silentchaos512.gems.item.ModItems;
+import net.silentchaos512.gems.init.ModItems;
 
 public class SlotGemChangerTarget extends Slot {
 

@@ -11,7 +11,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.RecipeSorter;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import net.silentchaos512.gems.item.ModItems;
+import net.silentchaos512.gems.init.ModItems;
 import net.silentchaos512.gems.lib.EnumGem;
 
 public class ModRecipes {
@@ -50,13 +50,13 @@ public class ModRecipes {
         for (int i=0;i<16;i++)
         {
             //light bags
-            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(Blocks.WOOL,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
-            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
-            GameRegistry.addRecipe(new BagRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i)));
+            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(Blocks.WOOL,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.init.ModBlocks.glowRose,1,i));
+            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.init.ModBlocks.glowRose,1,i));
+            GameRegistry.addRecipe(new BagRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.init.ModBlocks.glowRose,1,i)));
             //dark bags
-            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),"wgw","wnw"," w ",'w',new ItemStack(Blocks.WOOL,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),'n',new ItemStack(Blocks.NETHERRACK,1));
-            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),"wgw","wnw"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),'n',new ItemStack(Blocks.NETHERRACK,1));
-            GameRegistry.addRecipe(new BagRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i),new ItemStack(Blocks.NETHERRACK,1)));
+            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),"wgw","wnw"," w ",'w',new ItemStack(Blocks.WOOL,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.init.ModBlocks.glowRose,1,i),'n',new ItemStack(Blocks.NETHERRACK,1));
+            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),"wgw","wnw"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.init.ModBlocks.glowRose,1,i),'n',new ItemStack(Blocks.NETHERRACK,1));
+            GameRegistry.addRecipe(new BagRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i+16),new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,OreDictionary.WILDCARD_VALUE),new ItemStack(net.silentchaos512.gems.init.ModBlocks.glowRose,1,i),new ItemStack(Blocks.NETHERRACK,1)));
 //            //light bags
 //            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(Blocks.wool,1,OreDictionary.WILDCARD_VALUE),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));
 //            GameRegistry.addRecipe(new ItemStack(com.m4thg33k.gemulation.items.ModItems.itemGemBag,1,i),"wgw","w w"," w ",'w',new ItemStack(ModItems.fluffyPuff),'g',new ItemStack(net.silentchaos512.gems.block.ModBlocks.glowRose,1,i));

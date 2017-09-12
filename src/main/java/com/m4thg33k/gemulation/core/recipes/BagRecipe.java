@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import net.silentchaos512.gems.block.ModBlocks;
+import net.silentchaos512.gems.init.ModBlocks;
 
 public class BagRecipe extends ShapelessOreRecipe{
 
